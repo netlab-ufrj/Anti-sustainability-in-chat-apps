@@ -29,7 +29,7 @@ The processing of personal data and sensitive personal data is subject to the pr
 
 Any security incidents involving the data contained in this spreadsheet are subject to the regulations set forth in the applicable data protection legislation, including Brazilian Law No. 13.709/2018 (LGPD).
 
-## Portuguese:
+## Português:
 
 Esta planilha contém dados coletados em grupos de mensageria e as informações sobre os emitentes das mensagens foram devidamente anonimizadas pelos pesquisadores, em obediência ao que determina a legislação aplicável. No entanto, no que diz respeito ao conteúdo das mensagens coletadas, a planilha pode conter dados pessoais tratados com amparo na base legal estabelecida na alínea "c" do inciso II do art. 11 da Lei nº 13.709/2018 (LGPD), incluindo dados pessoais sensíveis.
 
