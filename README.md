@@ -14,6 +14,7 @@ The dataset used in this study comprises a collection of 2 datasets with unique 
 | `macrocategory`   | Categorization label for the domain or host                    | object    |
 | `macrotopic`      | Primary topic identified through topic analysis                | object    |
 | `recipient_count` | Number of users exposed to the message                         | int64     |
+| `dateref`         | Date and time that the message was posted                      | datetime  |
 
 
 The dataset was processed to extract URLs and hyperlinks embedded within the messages. Subsequently, each URL was parsed to identify its domain (`url_host_domain`), which was then manually labeled into distinct macrocategories according to specific annotation protocols. Finally, topic analysis (BERTopic) was conducted to classify each message into broader macrotopics, enabling structured and meaningful analysis of discourse patterns and information flow within these communication platforms. Finally, the recipient_count estimates the number of potential views for that message from their respective groups.
