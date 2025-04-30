@@ -6,15 +6,16 @@ Database used in the study of narratives in chat apps concerning environmental i
 The dataset used in this study comprises a collection of 2 datasets with unique messages retrieved from Telegram and WhatsApp, stored respectively in `telegram/output.xlsx` and `whatsapp/output.xlsx`. Each entry in the dataset consists of a message (msg_id_url) and its unique values of extracted url_host_domains from hyperlinks in the message (msg). Messages might have multiple links, to multiple host/domains.
 
 
-| Column            | Description                                                    | Data Type |
-|-------------------|----------------------------------------------------------------|-----------|
-| `msg_id_url`      | Unique identifier for each message                             | object    |
-| `msg`             | Textual content of the message                                 | object    |
-| `url_host_domain` | Domain or host name extracted from each hyperlink              | object    |
-| `macrocategory`   | Categorization label for the domain or host                    | object    |
-| `macrotopic`      | Primary topic identified through topic analysis                | object    |
-| `recipient_count` | Number of users exposed to the message                         | int64     |
-| `dateref`         | Date and time that the message was posted                      | datetime  |
+| Column            | Description                                                          | Data Type |
+|-------------------|----------------------------------------------------------------------|-----------|
+| `msg_id_url`      | Unique identifier for each message                                   | object    |
+| `msg`             | Textual content of the message                                       | object    |
+| `url_host_domain` | Domain or host name extracted from each hyperlink                    | object    |
+| `macrocategory`   | Categorization label for the domain or host                          | object    |
+| `macrotopic`      | Primary topic identified through topic analysis                      | object    |
+| `recipient_count` | Number of users exposed to the message                               | int64     |
+| `dateref`         | Date and time that the message was posted                            | datetime  |
+| `qtd_hrefs`       | Number of unique hyperlinks from the url_host_domain in the message  | datetime  |
 
 
 The dataset was processed to extract URLs and hyperlinks embedded within the messages. Subsequently, each URL was parsed to identify its domain (`url_host_domain`), which was then manually labeled into distinct macrocategories according to specific annotation protocols. Finally, topic analysis (BERTopic) was conducted to classify each message into broader macrotopics, enabling structured and meaningful analysis of discourse patterns and information flow within these communication platforms. Finally, the recipient_count estimates the number of potential views for that message from their respective groups.
