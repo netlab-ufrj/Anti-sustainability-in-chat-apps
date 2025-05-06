@@ -3,6 +3,8 @@ Database used in the study of narratives in chat apps concerning environmental i
 
 ## Data Description
 
+### Messages
+
 The dataset used in this study comprises a collection of 2 datasets with unique messages retrieved from Telegram and WhatsApp, stored respectively in `telegram/output.xlsx` and `whatsapp/output.xlsx`. Each entry in the dataset consists of a message (msg_id_url) and its unique values of extracted url_host_domains from hyperlinks in the message (msg). Messages might have multiple links, to multiple host/domains.
 
 
@@ -19,6 +21,19 @@ The dataset used in this study comprises a collection of 2 datasets with unique 
 
 
 The dataset was processed to extract URLs and hyperlinks embedded within the messages. Subsequently, each URL was parsed to identify its domain (`url_host_domain`), which was then manually labeled into distinct macrocategories according to specific annotation protocols. Finally, topic analysis (BERTopic) was conducted to classify each message into broader macrotopics, enabling structured and meaningful analysis of discourse patterns and information flow within these communication platforms. Finally, the recipient_count estimates the number of potential views for that message from their respective groups.
+
+### Topic Mapping
+
+The topic mapping is provided in the file `macrotopic_mapping.xlsx`, which contains the following four columns:
+
+| Column                 | Description                                                            | Data Type |
+| ---------------------- | ---------------------------------------------------------------------- | --------- |
+| `topic_representation` | A list of the most relevant words representing each topic              | object    |
+| `macrotopic`           | The macrotopic label assigned to the topic                             | object    |
+| `unique_texts`         | The number of unique text messages associated with the topic           | int64     |
+| `source`               | The platform (Telegram or WhatsApp) from which the topic was extracted | object    |
+
+Topics were generated based on unique text messages to avoid potential bias from duplicated content. Analyses for Telegram and WhatsApp were conducted independently but were consolidated under the same macrotopic definitions for comparative purposes.
 
 
 # Data Disclaimer
